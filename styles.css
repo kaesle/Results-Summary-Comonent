@@ -19,6 +19,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -28,10 +29,12 @@ body {
   align-items: center;
   height: 95vh;
   height: 95svh;
-  overflow: hidden;
+  overflow-y: hidden;
 
   font-family: Hanken Grotesk, Helvetica, Arial, sans-serif;
   font-size: 18px;
+  font-weight: 700;
+  color: var(--darkGrayBlue);
 }
 
 .container {
@@ -76,19 +79,106 @@ body {
   background-color: var(--persianBlue);
 }
 
-.score {
+.purple .score {
   position: relative;
   top: 1rem;
   font-size: 4rem;
   font-weight: 800;
 }
 
-.outOf {
+.purple .outOf {
   font-size: 1rem;
 }
 
 .message {
   margin: 0 3.5rem 2rem 3.5rem;
+}
+
+.white {
+  text-align: left;
+  padding: 30px;
+}
+
+.white .outOf {
+  opacity: 0.6;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.scoreBlock {
+  display: inline-block;
+  position: absolute;
+  right: 1rem;
+}
+
+.summary {
+  width: 100%;
+}
+
+.continue {
+  width: 100%;
+  height: 3.4rem;
+  border-radius: 1.7rem;
+  background-color: var(--darkGrayBlue);
+  color: white;
+  font-size: large;
+  font-weight: 700;
+}
+
+li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  border-radius: 0.5em;
+}
+
+.label {
+  position: relative;
+  bottom: 0.2rem;
+  left: 0.5rem;
+}
+
+li.reaction::after {
+  background-color: var(--lightRed);
+}
+
+li.memory::after {
+  background-color: var(--orangeyYellow);
+}
+
+li.verbal::after {
+  background-color: var(--greenTeal);
+}
+
+li.visual::after {
+  background-color: var(--cobaltBlue);
+}
+
+.reaction .label {
+  color: var(--lightRed);
+}
+.memory .label {
+  color: var(--orangeyYellow);
+}
+.verbal .label {
+  color: var(--greenTeal);
+}
+.visual .label {
+  color: var(--cobaltBlue);
 }
 
 .attribution {
