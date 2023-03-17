@@ -42,7 +42,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: stretch;
-  width: min(740px,100%);
+  width: min(740px, 100%);
   height: 510px;
 }
 
@@ -58,13 +58,28 @@ body {
 
 .purple {
   color: white;
-  background: linear-gradient(to bottom,var(--violetBlue),var(--persianBlue));
+  background: linear-gradient(to bottom, var(--violetBlue), var(--persianBlue));
   border: solid;
   border-radius: 30px;
 }
 
+.result,
+.purple .outOf,
+.message {
+  color: var(--lightLavender);
+}
+
 .result {
   margin-top: 2rem;
+}
+
+.summary {
+  margin-top: 0.8rem;
+}
+
+.result,.summary {
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .circle {
@@ -81,7 +96,7 @@ body {
 
 .purple .score {
   position: relative;
-  top: 1rem;
+  margin-top: 1rem;
   font-size: 4rem;
   font-weight: 800;
 }
@@ -92,6 +107,7 @@ body {
 
 .message {
   margin: 0 3.5rem 2rem 3.5rem;
+  font-weight: 500;
 }
 
 .white {
@@ -135,7 +151,7 @@ li {
 }
 
 li::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
